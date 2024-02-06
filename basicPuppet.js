@@ -27,9 +27,12 @@ async function run() {
         return document.querySelector('div.score').textContent
       })
       
-      if(fs.existsSync('filename'))
+      if(fs.existsSync('./Scores/values.txt'))
       {
       //If the score text file doesnt exist then create one
+      fs.writeFileSync('./Scores/values.txt', `${score}\n`, function(err){
+        if (err) throw err;
+      })
       }else{
       //Save the score to the text file containing scores of previous runs
       fs.appendFile('./Scores/values.txt', `${score}\n`, function(err){
