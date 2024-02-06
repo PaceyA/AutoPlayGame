@@ -2,4 +2,6 @@
 .env
 node_modules/
 Scores/*
-!Scores/.gitkeep 
+!Scores/values.txt
+
+
