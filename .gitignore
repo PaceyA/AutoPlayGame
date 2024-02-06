@@ -1,3 +1,5 @@
 .npm
 .env
 node_modules/
+Scores/*
+!Scores/
